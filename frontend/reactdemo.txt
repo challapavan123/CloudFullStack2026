@@ -1,0 +1,6 @@
+1. React SPA
+2. React is just a library
+3. Virtual DOM
+4. React Library (react-core and react-dom)
+5. Components
+6. Powerful Data Binding
