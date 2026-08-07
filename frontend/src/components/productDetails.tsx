@@ -10,7 +10,7 @@ export const ProductDetails:React.FC = () => {
         // Fetch product details from the backend API
         const fetchProductDetails = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/products/:id'); // Replace with your backend API endpoint
+                const response = await fetch(`http://localhost:5001/api/products/${id}`); // Replace with your backend API endpoint
                 const data = await response.json();
                 setProduct(data); // Log the fetched product details
             } catch (error) {

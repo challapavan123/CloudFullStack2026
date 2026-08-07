@@ -14,7 +14,7 @@ const ProductsList: React.FC = () => {
         setProducts(data);
          // Initialize filterProducts with the fetched data
       });
-  },[products]);
+  },[]);
 
     const [showImages,setShowImages]  = useState(true);
    const filteredProducts = useMemo(() => {
@@ -95,8 +95,7 @@ style={{ maxWidth: "75px" }}
 </td>
 
 <td className="fw-semibold">
-<NavLink
- to={`/products/${product._id}`}>
+<NavLink to={`/products/${product._id}`}>
 {product.name}
 </NavLink>
 </td>
