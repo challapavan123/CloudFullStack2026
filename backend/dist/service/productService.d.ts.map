@@ -1,1 +1,1 @@
-{"version":3,"file":"productService.d.ts","sourceRoot":"","sources":["../../src/service/productService.ts"],"names":[],"mappings":"AACA,OAAO,QAAQ,MAAM,qBAAqB,CAAC;AAM3C,eAAO,MAAM,cAAc,QAAa,OAAO,CAAC,QAAQ,EAAE,CAEzD,CAAA"}
+{"version":3,"file":"productService.d.ts","sourceRoot":"","sources":["../../src/service/productService.ts"],"names":[],"mappings":"AACA,OAAO,QAAQ,MAAM,qBAAqB,CAAC;AAM3C,eAAO,MAAM,cAAc,QAAa,OAAO,CAAC,QAAQ,EAAE,CAEzD,CAAA;AACD,eAAO,MAAM,cAAc,OAAc,MAAM,GAAE,IAAI,KACrD,OAAO,CAAC,QAAQ,GAAG,IAAI,CAEtB,CAAA"}

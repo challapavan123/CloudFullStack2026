@@ -12,9 +12,13 @@ router.route("/").get(async (req: Request, res: Response) => {
     }
 });
     router.route("/:id").get(async (req: Request, res: Response) => {
-        const productId = req.params.id;
+        const rawId = req.params.id;
+        const id = Array.isArray(rawId) ? rawId[0] : rawId;
+        if (!id) {
+            return res.status(400).json({ error: "Product id is required" });
+        }
         try {
-            const product = await getProductById(productId);
+            const product = await getProductById(id);
             if (product) {
                 res.json(product);
             } else {

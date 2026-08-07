@@ -1,8 +1,10 @@
 import express from "express";
 import productRouter from "./router/productRouter.js";
 import { connectDB } from "./config/dbConfig.js";
+import cors from "cors";
 const app = express();
 const PORT = process.env.PORT || 5001;
+app.use(cors());
 app.use(express.json());
 app.use("/api/products", productRouter);
 connectDB("mongodb+srv://admin:admin@expresscluster.pcaruhd.mongodb.net/productsdb")
