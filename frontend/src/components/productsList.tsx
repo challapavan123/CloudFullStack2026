@@ -1,11 +1,12 @@
 //import {products} from '../data/products';
-import { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Ratings from './Ratings';
 import { NavLink } from 'react-router-dom';
+import type IProduct from '../model/product';
 
-const ProductsList = () => {
-  const [products, setProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+const ProductsList: React.FC = () => {
+  const [products, setProducts] = useState<IProduct[]>([]);
+  const [searchTerm, setSearchTerm] = useState<string>("");
   useEffect(() => {
     fetch('http://localhost:5001/api/products')
       .then(response => response.json())
@@ -95,7 +96,7 @@ style={{ maxWidth: "75px" }}
 
 <td className="fw-semibold">
 <NavLink
- to={`/products/${product.id}`}>
+ to={`/products/${product._id}`}>
 {product.name}
 </NavLink>
 </td>
