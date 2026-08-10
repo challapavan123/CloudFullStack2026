@@ -1,10 +1,18 @@
 import { useState, useEffect } from "react";
 import {useParams} from "react-router-dom";
 import type IProduct from "../model/product";
+import Ratings from "./Ratings";
+import { useCart } from "./cartstore";
+
 export const ProductDetails:React.FC = () => {
 
     const [product, setProduct] = useState<IProduct | null>(null);
     const { id } = useParams<{ id: string }>();
+    
+        // Implement the logic to add the product to the cart
+        const { addToCart } = useCart()
+         
+    
 
     useEffect(() => {
         // Fetch product details from the backend API
@@ -72,7 +80,7 @@ export const ProductDetails:React.FC = () => {
 
                   <ul className="list-group list-group-flush mb-3">
                     <li className="list-group-item">
-                      <strong>Rating:</strong> ⭐ {product.starRating}
+                      <Ratings rating={product.rating || 0} />
                     </li>
                   </ul>
 
