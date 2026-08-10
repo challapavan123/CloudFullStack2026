@@ -4,6 +4,7 @@ import './App.css'
 import ProductsList from './components/productsList'
 import AppLayout from './components/AppLayout'
 import  { ProductDetails } from './components/productDetails'
+import Cart from './components/Cart'
 
 function App() {
  
@@ -17,7 +18,7 @@ function App() {
   <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/about" element={<div>About Page</div>} />
         <Route path="/help" element={<div>Help Page</div>} />
-        <Route path="/cart" element={<div>Cart Page</div>} />
+        <Route path="/cart" element={<Cart />} />
       </Route>
       
       
