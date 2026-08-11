@@ -82,9 +82,9 @@ export const PaymentsPage: React.FC = () => {
                 {/* Submit */}
                 <button
                   className="btn btn-success w-100"
-                  disabled={isSubmitting}
+                  type="submit"
                 >
-                  {isSubmitting ? "Processing..." : "Pay Now"}
+                  { "Processing..." }
                 </button>
 
               </form>

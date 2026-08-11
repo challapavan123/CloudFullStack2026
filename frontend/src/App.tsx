@@ -5,6 +5,7 @@ import ProductsList from './components/productsList'
 import AppLayout from './components/AppLayout'
 import  { ProductDetails } from './components/productDetails'
 import Cart from './components/Cart'
+import { PaymentsPage } from './components/Payments'
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
         <Route path="/about" element={<div>About Page</div>} />
         <Route path="/help" element={<div>Help Page</div>} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<PaymentsPage/>} />
       </Route>
       
       
