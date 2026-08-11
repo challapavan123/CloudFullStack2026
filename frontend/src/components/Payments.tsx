@@ -3,7 +3,7 @@ import {paymentSchema,type PaymentFormData} from "../validators/validation.schem
 import {zodResolver} from "@hookform/resolvers/zod";
 
 export const PaymentsPage: React.FC = () => {
-    const {register,handleSubmit,formState:{errors}} =
+    const {register,handleSubmit,formState:{errors,isSubmitting}} =
     useForm<PaymentFormData>({
         resolver:zodResolver(paymentSchema),
 
@@ -54,11 +54,11 @@ export const PaymentsPage: React.FC = () => {
                     <label className="form-label">MM</label>
                     <input
                       className="form-control"
-                      maxLength={2}
-                      {...register("expiryDate")}
+                      maxLength={5}
+                      {...register("expirationDate")}
                     />
                     <small className="text-danger">
-                      {errors.expiryDate?.message}
+                      {errors.expirationDate?.message}
                     </small>
                   </div>
 
@@ -82,9 +82,11 @@ export const PaymentsPage: React.FC = () => {
                 {/* Submit */}
                 <button
                   className="btn btn-success w-100"
-                  type="submit"
+                  type="submit"   disabled={isSubmitting}
                 >
-                  { "Processing..." }
+                  {isSubmitting
+            ? "Processing Payment..."
+            : "Pay Now"}
                 </button>
 
               </form>
