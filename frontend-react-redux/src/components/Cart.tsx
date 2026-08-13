@@ -1,12 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import { useCart } from "./cartstore";
-import { useEffect } from "react";
+import {useAppSelector} from '../store/hooks';
+
 
 const Cart = () => {
-const { items } = useCart();
-  useEffect(() => {
+const items = useAppSelector((state) => state.cart.items);
   
-  }, [items])
   
   const navigate = useNavigate();
 
