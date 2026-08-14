@@ -14,6 +14,7 @@ public class MinMaxArrayImpl<T extends Comparable<T>> implements MinMaxArray<T> 
             if (element.compareTo(max) > 0) {
                 max = element;
             }   
+        }
         return max;
     }
 

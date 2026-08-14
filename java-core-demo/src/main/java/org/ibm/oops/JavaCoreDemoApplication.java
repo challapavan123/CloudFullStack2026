@@ -24,13 +24,24 @@ public class JavaCoreDemoApplication {
 		System.out.println("Max: " + charArray.findMax());
 		System.out.println("Min: " + charArray.findMin());
 
-		MinMaxArray<Transaction> transactionArray = new MinMaxArrayImpl<>
-		(new Transaction(1L, 78654.5, "Payment for services"),
-		new Transaction(2L, 12345.0, "Refund for order"),
-		new Transaction(3L, 98765.0, "Payment for products"),
-		new Transaction(4L, 54321.0, "Refund for subscription"));
-		System.out.println("Min Trxn	"+transactionArray.findMin());
-		System.out.println("Max Trxn "+transactionArray.findMax());
+		// MinMaxArray<Transaction> transactionArray = new MinMaxArrayImpl<>
+		// (new Transaction(1L, 78654.5, "Payment for services"),
+		// new Transaction(2L, 12345.0, "Refund for order"),
+		// new Transaction(3L, 98765.0, "Payment for products"),
+		// new Transaction(4L, 54321.0, "Refund for subscription"));
+		// System.out.println("Min Trxn	"+transactionArray.findMin());
+		// System.out.println("Max Trxn "+transactionArray.findMax());
+	
+	
+	StringProcessor upperCase = text -> text.toUpperCase();
+
+	StringProcessor repeater = text -> text+text;
+
+	//System.out.println(upperCase.process(repeater.process("abcd")));
+	//System.out.println(repeater.process("abcd"));
+
+	StringProcessor combined = upperCase.andThen(repeater);
+	System.out.println(combined.process("abcd"));
 	}
 
 }

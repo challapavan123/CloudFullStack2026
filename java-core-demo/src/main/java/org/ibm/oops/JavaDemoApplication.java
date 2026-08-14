@@ -25,8 +25,8 @@ public class JavaDemoApplication {
 		CPU.Cache cache = new CPU.Cache(16 * 1024 * 1024); // Create a cache with 16 MB size	
 		cache.printCacheInfo();
 
-		Transaction transaction = 
-		new Transaction(12345L, 250.75, "Payment for services");
+		// Transaction transaction = 
+		// new Transaction(12345L, 250.75, "Payment for services");
 		//transaction.transactionId(3763763763L)
 		// Create a cache with 16 MB size	
 		//new Shape(23.4,34.5)
