@@ -4,11 +4,11 @@ import java.time.LocalDateTime;
 
 public class Transaction1 extends Object{
     private final long transactionId;
-    private final double amount;    
+    private final Double amount;    
     private final String description;
     private LocalDateTime transactionDateTime;
 
-    public Transaction1(long transactionId, double amount, String description,
+    public Transaction1(long transactionId, Double amount, String description,
         LocalDateTime transactionDateTime
     ) {
         this.transactionId = transactionId;
@@ -20,7 +20,7 @@ public class Transaction1 extends Object{
     public long getTransactionId() {
         return transactionId;       
     }   
-    public double getAmount() {
+    public Double getAmount() {
         return amount;
     }
     public String getDescription() {

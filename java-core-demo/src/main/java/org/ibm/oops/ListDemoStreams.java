@@ -11,7 +11,7 @@ import java.util.function.Predicate;
 import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
-public class ListDemo {
+public class ListDemoStreams {
 
     public static void main(String[] args) {
         
@@ -39,14 +39,13 @@ public class ListDemo {
         Stream<Transaction> streams=  setTransactions.stream();
 
         // intermediate operations
-
-        Predicate<Transaction> predicate =transaction ->  transaction.amount()>= 45000.0;
-        Stream<Transaction> filteredStream =  streams.filter(predicate);
+  DoubleSummaryStatistics stats= 
+  streams.filter(transaction ->  transaction.amount()>= 45000.0)
+  .mapToDouble(Transaction::amount).summaryStatistics();
         // Streams are Lazy
         // One more intermediate Operation
-       DoubleStream amountStream  = filteredStream.mapToDouble(Transaction::amount);
-        // Terminal Operation
-        DoubleSummaryStatistics stats= amountStream.summaryStatistics();
+      
+      
         System.out.println("Min Value "+stats.getMin());
         System.out.println("Max Value "+stats.getMax());
         System.out.println("Average Value "+stats.getAverage());
