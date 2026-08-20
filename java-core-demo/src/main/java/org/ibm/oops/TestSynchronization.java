@@ -30,3 +30,12 @@ public class TestSynchronization {
     }
 
 }
+
+// Spring also provides solutions for different enterprise problems
+// 1. Spring Boot
+// 2. Spring Cloud
+// 3. Spring Data
+// 4. Spring Security
+// 5. Spring Mobile
+
+// 7676869057 
