@@ -12,16 +12,23 @@ import org.springframework.stereotype.Repository;
 import com.myapp.spring.domain.Movie;
 
 @Repository
-@Primary
-public class MovieRecommendationRepositoryImpl implements MovieRecommendationRepository{
+//@Primary
+public class MovieRecommendationRepositoryAIImpl implements MovieRecommendationRepository{
 
 
     private final List<Movie> movies;
 
    // @Autowired
-    public MovieRecommendationRepositoryImpl(@Qualifier("movies2") List<Movie> movies) {
+    public MovieRecommendationRepositoryAIImpl(@Qualifier("movies1") List<Movie> movies) {
         this.movies = movies;
     }
+
+    // Singleton
+    // Prototype
+    // Request
+    // Session
+    // Application
+    // WebSocket
 
 
 
@@ -29,7 +36,6 @@ public class MovieRecommendationRepositoryImpl implements MovieRecommendationRep
 
     @Override
     public List<Movie> recommendations(String movieName) {
-      //  transaction.begin()
       return movies.stream().filter(movie -> movie.name().equalsIgnoreCase(movieName))
             .findFirst().map(selectedMovie -> 
                 movies.stream().filter(movie -> 
