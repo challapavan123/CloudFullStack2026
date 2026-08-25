@@ -1,0 +1,5 @@
+description,status
+Application is not starting,NEW
+Database connection failure,IN_PROGRESS
+Payment transaction failed,NEW
+Email notification not received,RESOLVED

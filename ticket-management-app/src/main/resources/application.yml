@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-boot-jpa
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ep-withered-leaf-au1dxeid.c-10.us-east-1.aws.neon.tech/neondb
+    username: neondb_owner
+    password: npg_2sMvn7LRIdti
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+example:
+  message: Default Profile    
